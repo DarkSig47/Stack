@@ -1,0 +1,21 @@
+var poly = 1991;
+var newPoly = 0;
+var Palindrom = false;
+var n;
+var m;
+
+n = poly % 10;
+m = ((poly - n) / 10);
+newPoly = (n * 10) + (m % 10); // Сбор числа задом наперед.
+while (m / 10 >= 1) {
+n = (m % 10);
+m = ((m - n) / 10);
+newPoly = newPoly * 10 + (m % 10);
+}
+console.log(newPoly);
+ir (poly === newPoly) {
+Palindrom = true;
+} else {
+Palindrom = false;
+}
+console.log(Palindrom);
