@@ -1,0 +1,17 @@
+//Сортировка чисел в массиве от меньшего к большему.
+var Array = [4, 2, 1, 3];
+console.log(Array);
+
+//"Перебирания места в массиве"
+for(var i = 0; i <= Array.length-2; i++) {
+var minimal = Array[i];
+//"Перебирание чисел из массива и сортировка"
+for (var j = i+1; j <= Array.length - 1; j++) {
+  if (Array[j] < minimal){
+  minimal = Array[j];
+  var swap = Array[i];
+  Array[i] = minimal;
+  Array[j] = swap;}
+}
+}
+console.log(Array);
